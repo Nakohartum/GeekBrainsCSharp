@@ -70,9 +70,13 @@ namespace HomeWork1
         public static void Load()
         {
             objs = new BaseObject[30];
-            for(int i = 0; i < objs.Length; i++)
+            for(int i = 0; i < objs.Length / 2; i++)
             {
-                objs[i] = new BaseObject(new Point(600, i * 20), new Point(15 - i, 15 - i), new Size(20, 20));
+                objs[i] = new BaseObject(new Point(600, i * 20), new Point(-i, -i), new Size(10, 10));
+            }
+            for(int i = objs.Length / 2; i < objs.Length; i++)
+            {
+                objs[i] = new Star(new Point(600, i * 20), new Point(-i, 0), new Size(5, 5));
             }
         }
     }

@@ -18,12 +18,12 @@ namespace HomeWork1
             this.Dir = Dir;
             this.Size = Size;
         }
-        public void Draw()
+        public virtual void Draw()
         {
             Game.Buffer.Graphics.DrawEllipse(Pens.White, Pos.X, Pos.Y, Size.Width, Size.Height);
 
         }
-        public void Update()
+        public virtual void Update()
         {
             Pos.X += Dir.X;
             Pos.Y += Dir.Y;
