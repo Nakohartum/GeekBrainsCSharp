@@ -1,0 +1,6 @@
+C:\Users\artem\OneDrive\Рабочий стол\GeekBrainsC#\HomeWork1\HomeWork1\obj\Debug\HomeWork1.csprojAssemblyReference.cache
+C:\Users\artem\OneDrive\Рабочий стол\GeekBrainsC#\HomeWork1\HomeWork1\bin\Debug\HomeWork1.exe.config
+C:\Users\artem\OneDrive\Рабочий стол\GeekBrainsC#\HomeWork1\HomeWork1\bin\Debug\HomeWork1.exe
+C:\Users\artem\OneDrive\Рабочий стол\GeekBrainsC#\HomeWork1\HomeWork1\bin\Debug\HomeWork1.pdb
+C:\Users\artem\OneDrive\Рабочий стол\GeekBrainsC#\HomeWork1\HomeWork1\obj\Debug\HomeWork1.exe
+C:\Users\artem\OneDrive\Рабочий стол\GeekBrainsC#\HomeWork1\HomeWork1\obj\Debug\HomeWork1.pdb
