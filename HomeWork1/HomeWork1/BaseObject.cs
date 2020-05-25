@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace HomeWork1
 {
@@ -11,17 +12,20 @@ namespace HomeWork1
     {
         protected Point Pos;
         protected Point Dir;
-        protected Size Size;
+        protected SizeF Size;
         public BaseObject(Point Pos, Point Dir, Size Size)
         {
             this.Pos = Pos;
             this.Dir = Dir;
             this.Size = Size;
         }
-        public virtual void Draw()
+       
+        public virtual void Draw(BufferedGraphics buffer )
         {
-            Game.Buffer.Graphics.DrawEllipse(Pens.White, Pos.X, Pos.Y, Size.Width, Size.Height);
-
+            Image image = Image.FromFile("C:/Users/artem/OneDrive/Рабочий стол/GeekBrainsC#/HomeWork1/planet.png");
+            
+            
+            buffer.Graphics.DrawImage(image, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
         public virtual void Update()
         {

@@ -32,6 +32,7 @@ namespace HomeWork1
             //Memorise form's size
             Width = form.ClientSize.Width;
             Height = form.ClientSize.Height;
+            
             //Linking buffer in a memory with graphical object for drawing in buffer
             Buffer = Context.Allocate(g, new Rectangle(0, 0, Width, Height));
             Load();
@@ -48,15 +49,13 @@ namespace HomeWork1
         public static void Draw()
         {
             //Checking graphic output
-            Buffer.Graphics.Clear(Color.Black);
-            Buffer.Graphics.DrawRectangle(Pens.White, new Rectangle(100, 100, 200, 200));
-            Buffer.Graphics.FillEllipse(Brushes.Wheat, new Rectangle(100, 100, 200, 200));
-            Buffer.Render();
+            
+            
 
             Buffer.Graphics.Clear(Color.Black);
             foreach(BaseObject obj in objs)
             {
-                obj.Draw();
+                obj.Draw(Buffer);
             }
             Buffer.Render();
         }
@@ -70,13 +69,17 @@ namespace HomeWork1
         public static void Load()
         {
             objs = new BaseObject[30];
-            for(int i = 0; i < objs.Length / 2; i++)
+            for(int i = 0; i < objs.Length / 3; i++)
             {
-                objs[i] = new BaseObject(new Point(600, i * 20), new Point(-i, -i), new Size(10, 10));
+                objs[i] = new BaseObject(new Point(600, i * 20), new Point(-i, -i), new Size(15, 15));
             }
-            for(int i = objs.Length / 2; i < objs.Length; i++)
+            for(int i = objs.Length / 3; i < objs.Length; i++)
             {
-                objs[i] = new Star(new Point(600, i * 20), new Point(-i, 0), new Size(5, 5));
+                objs[i] = new Star(new Point(600, i * 20), new Point(-i, i), new Size(10, 10));
+            }
+            for (int i = 20; i < objs.Length; i++)
+            {
+                objs[i] = new Meteorit(new Point(600, i * 20), new Point(i, 0), new Size(5, 5));
             }
         }
     }

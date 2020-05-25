@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace HomeWork1
 {
-    class Star: BaseObject
+    class Meteorit: BaseObject
     {
-        public Star(Point pos, Point dir, Size size):base(pos, dir, size)
+        public Meteorit(Point pos, Point dir, Size size):base(pos, dir, size)
         {
 
         }
@@ -21,11 +21,13 @@ namespace HomeWork1
 
             buffer.Graphics.DrawImage(image, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
+
         public override void Update()
         {
             Pos.X = Pos.X + Dir.X;
-            
-            if (Pos.X < 0) Pos.X = Game.Width + (int)Size.Width;
+
+            if (Pos.X > 800) Pos.X = 0;
         }
+
     }
 }
